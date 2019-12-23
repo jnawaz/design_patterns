@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        var factoryA: FurnitureFactory = ModernFurnitureFactory()
+        var chairA = factoryA.createChair()
+        chairA.sitOn()
+
+        var factoryB: FurnitureFactory = VictorianFurnitureFactory()
+        var chairB = factoryB.createChair()
+        chairB.sitOn()
+
         return true
     }
 
